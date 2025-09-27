@@ -1,0 +1,152 @@
+{
+  "basic": {
+    "base_url": {
+      "value": "http://120.55.57.58:3510/",
+      "description": "网站地址",
+      "type": "string",
+      "validation": "^https?://.+/$"
+    },
+    "default_password": {
+      "value": "123456",
+      "description": "默认密码",
+      "type": "string",
+      "min_length": 1,
+      "max_length": 20
+    },
+    "max_workers": {
+      "value": 12,
+      "description": "最大线程数",
+      "type": "int",
+      "min": 1,
+      "max": 20
+    }
+  },
+  "browser": {
+    "headless_mode": {
+      "value": false,
+      "description": "无头模式 (后台运行)",
+      "type": "bool"
+    },
+    "browser_width": {
+      "value": 350,
+      "description": "浏览器窗口宽度",
+      "type": "int",
+      "min": 200,
+      "max": 800
+    },
+    "browser_height": {
+      "value": 400,
+      "description": "浏览器窗口高度",
+      "type": "int",
+      "min": 200,
+      "max": 800
+    },
+    "window_cols": {
+      "value": 4,
+      "description": "窗口列数",
+      "type": "int",
+      "min": 1,
+      "max": 6
+    },
+    "window_rows": {
+      "value": 3,
+      "description": "窗口行数",
+      "type": "int",
+      "min": 1,
+      "max": 4
+    }
+  },
+  "timing": {
+    "login_wait_time": {
+      "value": 10,
+      "description": "登录等待时间 (秒)",
+      "type": "int",
+      "min": 5,
+      "max": 30
+    },
+    "upload_wait_time": {
+      "value": 2,
+      "description": "上传等待时间 (秒)",
+      "type": "int",
+      "min": 1,
+      "max": 10
+    },
+    "submit_wait_time": {
+      "value": 5,
+      "description": "提交等待时间 (秒)",
+      "type": "int",
+      "min": 2,
+      "max": 15
+    },
+    "status_check_wait_time": {
+      "value": 2,
+      "description": "状态检查等待时间 (秒)",
+      "type": "int",
+      "min": 1,
+      "max": 10
+    }
+  },
+  "image": {
+    "output_dir": {
+      "value": "generated_images",
+      "description": "图片输出目录",
+      "type": "string",
+      "min_length": 1,
+      "max_length": 50
+    },
+    "image_quality": {
+      "value": 95,
+      "description": "图片质量 (1-100)",
+      "type": "int",
+      "min": 50,
+      "max": 100
+    },
+    "max_images_per_student": {
+      "value": 10,
+      "description": "每位学生最大图片数",
+      "type": "int",
+      "min": 1,
+      "max": 20
+    },
+    "font_size_large": {
+      "value": 36,
+      "description": "大字体大小",
+      "type": "int",
+      "min": 20,
+      "max": 60
+    },
+    "font_size_medium": {
+      "value": 24,
+      "description": "中字体大小",
+      "type": "int",
+      "min": 16,
+      "max": 40
+    },
+    "font_size_small": {
+      "value": 18,
+      "description": "小字体大小",
+      "type": "int",
+      "min": 12,
+      "max": 30
+    }
+  },
+  "file": {
+    "supported_image_extensions": {
+      "value": [
+        "*.jpg",
+        "*.jpeg",
+        "*.png"
+      ],
+      "description": "支持的图片格式",
+      "type": "list",
+      "options": [
+        "*.jpg",
+        "*.jpeg",
+        "*.png",
+        "*.bmp",
+        "*.gif",
+        "*.tiff"
+      ]
+    }
+  }
+}
